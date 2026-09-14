@@ -2,9 +2,20 @@ cff-version: 1.2.0
 message: "If you use this experimental code, please cite the associated paper."
 title: "Gradient-Guided Learning for LesserDNN with Quantized Weights: CIFAR-10 Experiments"
 type: software
+abstract: >-
+  Reproducible CIFAR-10 experiments evaluating three gradient-guided update
+  modes for LesserDNN with quantized forward weights and float32 shadow
+  weights, together with a full-precision PyTorch reference.
 authors:
   - family-names: Takemoto
     given-names: Masashi
 version: 1.0.0
-date-released: 2026-09-10
+date-released: 2026-09-14
 license: MIT
+repository-code: "https://github.com/BeatCraft/lesserdnn-cifar10-experiments"
+keywords:
+  - LesserDNN
+  - CIFAR-10
+  - quantized neural networks
+  - gradient-guided learning
+  - shadow weights
