@@ -1,0 +1,20 @@
+{
+  "protocol": "rigorous_eval_v1",
+  "framework": "LesserDNN",
+  "dataset": "CIFAR-10",
+  "rules": ["single", "two_batch_average", "same_sign"],
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "target_epochs": 300,
+  "learning_rate_segments": [
+    {"start": 1, "end": 100, "learning_rate": 0.01},
+    {"start": 101, "end": 200, "learning_rate": 0.005},
+    {"start": 201, "end": 300, "learning_rate": 0.001}
+  ],
+  "batch_size": 128,
+  "validation_size": 5000,
+  "split_seed": 20260826,
+  "epsilon": 0.0,
+  "augmentation": false,
+  "selection": "validation_accuracy_then_validation_loss",
+  "test_usage": "once_after_checkpoint_selection"
+}

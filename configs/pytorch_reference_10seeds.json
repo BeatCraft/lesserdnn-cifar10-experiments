@@ -1,0 +1,21 @@
+{
+  "protocol": "cifar10_pytorch_reference_v1",
+  "framework": "PyTorch",
+  "reference": "full_precision_sgd",
+  "dataset": "CIFAR-10",
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "target_epochs": 50,
+  "learning_rate_segments": [
+    {"start": 1, "end": 50, "learning_rate": 0.01}
+  ],
+  "batch_size": 128,
+  "validation_size": 5000,
+  "split_seed": 20260826,
+  "optimizer": "SGD(momentum=0,weight_decay=0)",
+  "precision": "float32",
+  "bias": false,
+  "batch_normalization": false,
+  "augmentation": false,
+  "selection": "validation_accuracy_then_validation_loss",
+  "test_usage": "once_after_checkpoint_selection"
+}

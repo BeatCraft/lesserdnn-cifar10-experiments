@@ -1,0 +1,11 @@
+{
+  "runs": 10,
+  "test_accuracy_mean": 0.6904,
+  "test_accuracy_std": 0.007427725837099204,
+  "test_accuracy_ci95_low": 0.6850868941791077,
+  "test_accuracy_ci95_high": 0.6957131058208923,
+  "test_loss_mean": 1.0166720580005646,
+  "best_epoch_mean": 26.9,
+  "training_seconds_mean": 188.66274557490001,
+  "missing": []
+}

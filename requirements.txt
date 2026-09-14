@@ -1,0 +1,8 @@
+numpy==2.0.2
+Pillow==11.3.0
+pyopencl==2025.1
+pyobjc==11.1
+pyobjc-framework-Metal==11.1
+scipy==1.13.1
+torch==2.8.0
+torchvision==0.23.0
