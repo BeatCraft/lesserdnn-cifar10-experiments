@@ -1,5 +1,7 @@
 # Gradient-Guided LesserDNN: CIFAR-10 Experiments
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22743842.svg)](https://doi.org/10.5281/zenodo.22743842)
+
 This repository-ready package contains the code and aggregate results for the CIFAR-10 experiments in
 **Gradient-Guided Learning for LesserDNN with Quantized Weights**. It includes the LesserDNN
 Metal implementation, three gradient update modes, and a controlled full-precision PyTorch reference.
@@ -165,6 +167,13 @@ the same 350 mini-batches but perform 175 updates per epoch.
 Detailed seed-level results and confidence intervals are under [`results/`](results/). The PyTorch run uses
 50 epochs whereas LesserDNN uses 300; cross-framework values are therefore a descriptive comparison of
 attained performance, not evidence that either framework is superior under an equal training budget.
+
+## Citation
+
+The archived `v1.0.0` release is available at
+[doi:10.5281/zenodo.22743843](https://doi.org/10.5281/zenodo.22743843). To cite the repository across all
+versions, use [doi:10.5281/zenodo.22743842](https://doi.org/10.5281/zenodo.22743842). Machine-readable
+citation metadata are provided in [`CITATION.cff`](CITATION.cff).
 
 ## License
 

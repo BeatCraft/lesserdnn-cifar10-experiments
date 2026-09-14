@@ -12,6 +12,7 @@ authors:
     orcid: "https://orcid.org/0000-0002-8978-9460"
 version: 1.0.0
 date-released: 2026-09-14
+doi: "10.5281/zenodo.22743843"
 license: MIT
 repository-code: "https://github.com/BeatCraft/lesserdnn-cifar10-experiments"
 keywords:
