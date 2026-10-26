@@ -227,7 +227,7 @@ sequentially; this experiment does not isolate a pure causal effect of zero or s
 ## Citation
 
 The current release is [v1.1.0](https://github.com/BeatCraft/lesserdnn-cifar10-experiments/releases/tag/v1.1.0).
-Its version-specific Zenodo DOI is added here after automatic archiving completes.
+Its version-specific Zenodo DOI is [10.5281/zenodo.23672272](https://doi.org/10.5281/zenodo.23672272).
 The earlier archived `v1.0.0` release is available at
 [doi:10.5281/zenodo.22743843](https://doi.org/10.5281/zenodo.22743843). To cite the repository across all
 versions, use [doi:10.5281/zenodo.22743842](https://doi.org/10.5281/zenodo.22743842). Machine-readable

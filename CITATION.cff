@@ -12,6 +12,7 @@ authors:
     given-names: Masashi
     orcid: "https://orcid.org/0000-0002-8978-9460"
 version: 1.1.0
+doi: "10.5281/zenodo.23672272"
 date-released: 2026-10-27
 url: "https://github.com/BeatCraft/lesserdnn-cifar10-experiments/releases/tag/v1.1.0"
 identifiers:
