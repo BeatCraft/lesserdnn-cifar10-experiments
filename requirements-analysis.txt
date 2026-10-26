@@ -1,0 +1,2 @@
+# Optional plotting dependency; core statistics use the main requirements.
+matplotlib==3.9.4

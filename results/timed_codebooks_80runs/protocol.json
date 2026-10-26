@@ -1,0 +1,550 @@
+{
+  "protocol": "timed_codebooks_v1",
+  "planned_runs": 80,
+  "completed_runs": 80,
+  "methods": [
+    "sa",
+    "gradient"
+  ],
+  "quant_sets": [
+    8,
+    9,
+    10,
+    11
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "model_weights": 174944,
+  "budget_s": 1800,
+  "interval_s": 300,
+  "initial_max_abs": 0.125,
+  "initialization": "independent uniform draws from codebook entries with abs(value)<=0.125",
+  "gradient_batch_size": 128,
+  "gradient_batches_per_epoch": 350,
+  "gradient_max_epochs": 300,
+  "gradient_lr_segments": [
+    {
+      "start": 1,
+      "end": 100,
+      "learning_rate": 0.01
+    },
+    {
+      "start": 101,
+      "end": 200,
+      "learning_rate": 0.005
+    },
+    {
+      "start": 201,
+      "end": 300,
+      "learning_rate": 0.001
+    }
+  ],
+  "gradient_update_rule": "single",
+  "sa_mutation_count": 8,
+  "sa_max_candidates_per_search": 100,
+  "sa_position_sampling": "uniform_with_replacement",
+  "sa_acceptance": "strict_full_training_ce_improvement",
+  "sa_temperature": null,
+  "sa_logical_batch_size": 45000,
+  "forward_chunk_size": 128,
+  "split_seed": 20260826,
+  "train_size": 45000,
+  "validation_size": 5000,
+  "test_used": false,
+  "selection": "30-minute endpoint; no best-validation selection",
+  "timing": "validation, setup, warm-up and saving excluded; initial SA baseline included; stop at candidate/update boundary",
+  "run_order": [
+    {
+      "method": "sa",
+      "quant_set": 9,
+      "seed": 0,
+      "run_name": "sa_q9_seed0"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 9,
+      "seed": 0,
+      "run_name": "gradient_q9_seed0"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 10,
+      "seed": 0,
+      "run_name": "gradient_q10_seed0"
+    },
+    {
+      "method": "sa",
+      "quant_set": 10,
+      "seed": 0,
+      "run_name": "sa_q10_seed0"
+    },
+    {
+      "method": "sa",
+      "quant_set": 10,
+      "seed": 1,
+      "run_name": "sa_q10_seed1"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 10,
+      "seed": 1,
+      "run_name": "gradient_q10_seed1"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 9,
+      "seed": 1,
+      "run_name": "gradient_q9_seed1"
+    },
+    {
+      "method": "sa",
+      "quant_set": 9,
+      "seed": 1,
+      "run_name": "sa_q9_seed1"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 9,
+      "seed": 2,
+      "run_name": "gradient_q9_seed2"
+    },
+    {
+      "method": "sa",
+      "quant_set": 9,
+      "seed": 2,
+      "run_name": "sa_q9_seed2"
+    },
+    {
+      "method": "sa",
+      "quant_set": 10,
+      "seed": 2,
+      "run_name": "sa_q10_seed2"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 10,
+      "seed": 2,
+      "run_name": "gradient_q10_seed2"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 10,
+      "seed": 3,
+      "run_name": "gradient_q10_seed3"
+    },
+    {
+      "method": "sa",
+      "quant_set": 10,
+      "seed": 3,
+      "run_name": "sa_q10_seed3"
+    },
+    {
+      "method": "sa",
+      "quant_set": 9,
+      "seed": 3,
+      "run_name": "sa_q9_seed3"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 9,
+      "seed": 3,
+      "run_name": "gradient_q9_seed3"
+    },
+    {
+      "method": "sa",
+      "quant_set": 9,
+      "seed": 4,
+      "run_name": "sa_q9_seed4"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 9,
+      "seed": 4,
+      "run_name": "gradient_q9_seed4"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 10,
+      "seed": 4,
+      "run_name": "gradient_q10_seed4"
+    },
+    {
+      "method": "sa",
+      "quant_set": 10,
+      "seed": 4,
+      "run_name": "sa_q10_seed4"
+    },
+    {
+      "method": "sa",
+      "quant_set": 10,
+      "seed": 5,
+      "run_name": "sa_q10_seed5"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 10,
+      "seed": 5,
+      "run_name": "gradient_q10_seed5"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 9,
+      "seed": 5,
+      "run_name": "gradient_q9_seed5"
+    },
+    {
+      "method": "sa",
+      "quant_set": 9,
+      "seed": 5,
+      "run_name": "sa_q9_seed5"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 9,
+      "seed": 6,
+      "run_name": "gradient_q9_seed6"
+    },
+    {
+      "method": "sa",
+      "quant_set": 9,
+      "seed": 6,
+      "run_name": "sa_q9_seed6"
+    },
+    {
+      "method": "sa",
+      "quant_set": 10,
+      "seed": 6,
+      "run_name": "sa_q10_seed6"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 10,
+      "seed": 6,
+      "run_name": "gradient_q10_seed6"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 10,
+      "seed": 7,
+      "run_name": "gradient_q10_seed7"
+    },
+    {
+      "method": "sa",
+      "quant_set": 10,
+      "seed": 7,
+      "run_name": "sa_q10_seed7"
+    },
+    {
+      "method": "sa",
+      "quant_set": 9,
+      "seed": 7,
+      "run_name": "sa_q9_seed7"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 9,
+      "seed": 7,
+      "run_name": "gradient_q9_seed7"
+    },
+    {
+      "method": "sa",
+      "quant_set": 9,
+      "seed": 8,
+      "run_name": "sa_q9_seed8"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 9,
+      "seed": 8,
+      "run_name": "gradient_q9_seed8"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 10,
+      "seed": 8,
+      "run_name": "gradient_q10_seed8"
+    },
+    {
+      "method": "sa",
+      "quant_set": 10,
+      "seed": 8,
+      "run_name": "sa_q10_seed8"
+    },
+    {
+      "method": "sa",
+      "quant_set": 10,
+      "seed": 9,
+      "run_name": "sa_q10_seed9"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 10,
+      "seed": 9,
+      "run_name": "gradient_q10_seed9"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 9,
+      "seed": 9,
+      "run_name": "gradient_q9_seed9"
+    },
+    {
+      "method": "sa",
+      "quant_set": 9,
+      "seed": 9,
+      "run_name": "sa_q9_seed9"
+    },
+    {
+      "method": "sa",
+      "quant_set": 11,
+      "seed": 0,
+      "run_name": "sa_q11_seed0"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 11,
+      "seed": 0,
+      "run_name": "gradient_q11_seed0"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 11,
+      "seed": 1,
+      "run_name": "gradient_q11_seed1"
+    },
+    {
+      "method": "sa",
+      "quant_set": 11,
+      "seed": 1,
+      "run_name": "sa_q11_seed1"
+    },
+    {
+      "method": "sa",
+      "quant_set": 11,
+      "seed": 2,
+      "run_name": "sa_q11_seed2"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 11,
+      "seed": 2,
+      "run_name": "gradient_q11_seed2"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 11,
+      "seed": 3,
+      "run_name": "gradient_q11_seed3"
+    },
+    {
+      "method": "sa",
+      "quant_set": 11,
+      "seed": 3,
+      "run_name": "sa_q11_seed3"
+    },
+    {
+      "method": "sa",
+      "quant_set": 11,
+      "seed": 4,
+      "run_name": "sa_q11_seed4"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 11,
+      "seed": 4,
+      "run_name": "gradient_q11_seed4"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 11,
+      "seed": 5,
+      "run_name": "gradient_q11_seed5"
+    },
+    {
+      "method": "sa",
+      "quant_set": 11,
+      "seed": 5,
+      "run_name": "sa_q11_seed5"
+    },
+    {
+      "method": "sa",
+      "quant_set": 11,
+      "seed": 6,
+      "run_name": "sa_q11_seed6"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 11,
+      "seed": 6,
+      "run_name": "gradient_q11_seed6"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 11,
+      "seed": 7,
+      "run_name": "gradient_q11_seed7"
+    },
+    {
+      "method": "sa",
+      "quant_set": 11,
+      "seed": 7,
+      "run_name": "sa_q11_seed7"
+    },
+    {
+      "method": "sa",
+      "quant_set": 11,
+      "seed": 8,
+      "run_name": "sa_q11_seed8"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 11,
+      "seed": 8,
+      "run_name": "gradient_q11_seed8"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 11,
+      "seed": 9,
+      "run_name": "gradient_q11_seed9"
+    },
+    {
+      "method": "sa",
+      "quant_set": 11,
+      "seed": 9,
+      "run_name": "sa_q11_seed9"
+    },
+    {
+      "method": "sa",
+      "quant_set": 8,
+      "seed": 0,
+      "run_name": "sa_q8_seed0"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 8,
+      "seed": 0,
+      "run_name": "gradient_q8_seed0"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 8,
+      "seed": 1,
+      "run_name": "gradient_q8_seed1"
+    },
+    {
+      "method": "sa",
+      "quant_set": 8,
+      "seed": 1,
+      "run_name": "sa_q8_seed1"
+    },
+    {
+      "method": "sa",
+      "quant_set": 8,
+      "seed": 2,
+      "run_name": "sa_q8_seed2"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 8,
+      "seed": 2,
+      "run_name": "gradient_q8_seed2"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 8,
+      "seed": 3,
+      "run_name": "gradient_q8_seed3"
+    },
+    {
+      "method": "sa",
+      "quant_set": 8,
+      "seed": 3,
+      "run_name": "sa_q8_seed3"
+    },
+    {
+      "method": "sa",
+      "quant_set": 8,
+      "seed": 4,
+      "run_name": "sa_q8_seed4"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 8,
+      "seed": 4,
+      "run_name": "gradient_q8_seed4"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 8,
+      "seed": 5,
+      "run_name": "gradient_q8_seed5"
+    },
+    {
+      "method": "sa",
+      "quant_set": 8,
+      "seed": 5,
+      "run_name": "sa_q8_seed5"
+    },
+    {
+      "method": "sa",
+      "quant_set": 8,
+      "seed": 6,
+      "run_name": "sa_q8_seed6"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 8,
+      "seed": 6,
+      "run_name": "gradient_q8_seed6"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 8,
+      "seed": 7,
+      "run_name": "gradient_q8_seed7"
+    },
+    {
+      "method": "sa",
+      "quant_set": 8,
+      "seed": 7,
+      "run_name": "sa_q8_seed7"
+    },
+    {
+      "method": "sa",
+      "quant_set": 8,
+      "seed": 8,
+      "run_name": "sa_q8_seed8"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 8,
+      "seed": 8,
+      "run_name": "gradient_q8_seed8"
+    },
+    {
+      "method": "gradient",
+      "quant_set": 8,
+      "seed": 9,
+      "run_name": "gradient_q8_seed9"
+    },
+    {
+      "method": "sa",
+      "quant_set": 8,
+      "seed": 9,
+      "run_name": "sa_q8_seed9"
+    }
+  ],
+  "codebook_series_order": "Q9/Q10, then Q11, then Q8; not jointly randomized",
+  "excluded": "Exploratory trials and the rejected single Q11 300-epoch run are not part of this dataset."
+}

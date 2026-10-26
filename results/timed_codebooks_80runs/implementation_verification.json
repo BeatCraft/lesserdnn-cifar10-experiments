@@ -1,0 +1,133 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-27T02:26:08.396182+09:00",
+  "scope": "Portable implementation verified against measured implementation, plus short CLI runs. This is not a new 80-run training experiment.",
+  "native_comparison": [
+    {
+      "quant_set": 8,
+      "status": "passed",
+      "initial_validation_exact": true,
+      "native_gradient_shadow_indexes_exact_three_updates": true,
+      "sa_proposals_exact": true,
+      "sa_resume_exact": true,
+      "duplicate_rollback_verified": true,
+      "strict_tie_rejection_100_candidates_verified": true
+    },
+    {
+      "quant_set": 9,
+      "status": "passed",
+      "initial_validation_exact": true,
+      "native_gradient_shadow_indexes_exact_three_updates": true,
+      "sa_proposals_exact": true,
+      "sa_resume_exact": true,
+      "duplicate_rollback_verified": true,
+      "strict_tie_rejection_100_candidates_verified": true
+    },
+    {
+      "quant_set": 10,
+      "status": "passed",
+      "initial_validation_exact": true,
+      "native_gradient_shadow_indexes_exact_three_updates": true,
+      "sa_proposals_exact": true,
+      "sa_resume_exact": true,
+      "duplicate_rollback_verified": true,
+      "strict_tie_rejection_100_candidates_verified": true
+    },
+    {
+      "quant_set": 11,
+      "status": "passed",
+      "initial_validation_exact": true,
+      "native_gradient_shadow_indexes_exact_three_updates": true,
+      "sa_proposals_exact": true,
+      "sa_resume_exact": true,
+      "duplicate_rollback_verified": true,
+      "strict_tie_rejection_100_candidates_verified": true
+    }
+  ],
+  "timed_runner": {
+    "status": "passed",
+    "results": [
+      {
+        "quant_set": 8,
+        "method": "gradient",
+        "status": "passed",
+        "resume_verified": true,
+        "warmup_initial_weights_and_validation_exact": true
+      },
+      {
+        "quant_set": 8,
+        "method": "sa",
+        "status": "passed",
+        "resume_verified": true,
+        "warmup_initial_weights_and_validation_exact": true
+      },
+      {
+        "quant_set": 9,
+        "method": "gradient",
+        "status": "passed",
+        "resume_verified": true,
+        "warmup_initial_weights_and_validation_exact": true
+      },
+      {
+        "quant_set": 9,
+        "method": "sa",
+        "status": "passed",
+        "resume_verified": true,
+        "warmup_initial_weights_and_validation_exact": true
+      },
+      {
+        "quant_set": 10,
+        "method": "gradient",
+        "status": "passed",
+        "resume_verified": true,
+        "warmup_initial_weights_and_validation_exact": true
+      },
+      {
+        "quant_set": 10,
+        "method": "sa",
+        "status": "passed",
+        "resume_verified": true,
+        "warmup_initial_weights_and_validation_exact": true
+      },
+      {
+        "quant_set": 11,
+        "method": "gradient",
+        "status": "passed",
+        "resume_verified": true,
+        "warmup_initial_weights_and_validation_exact": true
+      },
+      {
+        "quant_set": 11,
+        "method": "sa",
+        "status": "passed",
+        "resume_verified": true,
+        "warmup_initial_weights_and_validation_exact": true
+      }
+    ]
+  },
+  "queue_two_run_smoke_and_completed_restart": "passed",
+  "environment": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "gpu": "Apple M4 Pro",
+    "python": "3.9.6",
+    "torch_threads": 10,
+    "dependencies": {
+      "numpy": "2.0.2",
+      "torch": "2.8.0",
+      "torchvision": "0.23.0",
+      "pyobjc-core": "11.1",
+      "pyobjc-framework-Metal": "11.1"
+    }
+  },
+  "source_sha256": {
+    "additional_experiments/comparison_runtime.py": "31716f0bcc0d89b81e2bc33e444a46eed51c12addf58c3bfa22746402e3a1886",
+    "additional_experiments/codebooks.py": "12942369e4724f13c825a249d45118c8372bcd354ba5be950b94d6c9d1538229",
+    "additional_experiments/strict_search.py": "81bb16af954c1cbf62abd311e7b28facd2ab59f3c4ba550666c123f1d8e7a5fb",
+    "additional_experiments/timed_run.py": "57680816eb0c53784fff2ea8538a408413e906d8686f19e6a0ce928b977e9f6f",
+    "additional_experiments/batched_paper_cnn_metal.py": "c0d87d2b671481d16d6a96f51b91eb86cffc45ccb281d3b22a13782cb240bea1",
+    "additional_experiments/run_experiment.py": "d1523c3bd95cb7c81e1c44562ae81469030a2e36f15ee34f68e7015b6addb35b",
+    "additional_experiments/verify_native.py": "94f068bfbd6f759f5a36e591c046cf7a802feb5acbe840c4a3da7b8959c255a7",
+    "additional_experiments/verify_timed_runner.py": "1257930ae11a18cfc148932fe378173b8ef3070e8972834e241a500b85f6c484",
+    "additional_experiments/reference_fixtures.json": "48e82c29cfb978cef082e6f0a59f64c442dc59c7d621684827e9313892591dd3"
+  }
+}

@@ -1,0 +1,665 @@
+{
+  "description": "Initial native updates and search proposals from the original measured implementation, seed 0; no rejected 300-epoch run included.",
+  "fixtures": [
+    {
+      "quant_set": 8,
+      "gradient_first_three_updates": [
+        {
+          "step": 1,
+          "gradient_sha256": "1fc86678cb9628fdc85ce97ed2f2e3c9ae8d825699ad17523857d242214bb367",
+          "shadow_sha256": "e88e64a141400bc9b7fc0d48cfade11405ef2236e0365a53a653fcac6b04943a",
+          "indexes_sha256": "ac87103129d293870bfdec1e40ab39dc318d40cb2bab1cb590c136e4fc7f93c7"
+        },
+        {
+          "step": 2,
+          "gradient_sha256": "ba6160cd4ecba887340aacb11de2213dc92cb34c22b94177852ffe6be4c5fad1",
+          "shadow_sha256": "f976654645b1b77ea7dce843f9ae4d2cfa190516fa2920aea39c214367a36a54",
+          "indexes_sha256": "cfaa4893345dfda704a24232a7b1d9dc5619c2a8ecec2d3f7df0aad2de679c9c"
+        },
+        {
+          "step": 3,
+          "gradient_sha256": "56ab821e7a51a301df6c6273c0767be50b436fc5cce0ba56c6bb37c1e4685c35",
+          "shadow_sha256": "71d3d58390c0a4d8b469f3472a347dea75719dc54ce40ce26528a8de94cfb599",
+          "indexes_sha256": "c1623b3aad24e27289d889c1f05a89e46b768f6879dc3a541bb14690509d22df"
+        }
+      ],
+      "sa_first_two_proposals": [
+        {
+          "baseline_loss": 26.278366640924894,
+          "candidate_loss": 26.16192854436774,
+          "retained_loss": 26.16192854436774,
+          "accepted": true,
+          "mutations": [
+            [
+              3,
+              0,
+              7965,
+              3,
+              4
+            ],
+            [
+              3,
+              2,
+              842,
+              3,
+              2
+            ],
+            [
+              1,
+              33,
+              244,
+              3,
+              5
+            ],
+            [
+              2,
+              84,
+              193,
+              4,
+              1
+            ],
+            [
+              3,
+              5,
+              43,
+              4,
+              5
+            ],
+            [
+              3,
+              4,
+              1591,
+              3,
+              1
+            ],
+            [
+              3,
+              1,
+              4935,
+              3,
+              2
+            ],
+            [
+              2,
+              104,
+              311,
+              4,
+              1
+            ]
+          ],
+          "baseline_samples": 45000,
+          "candidate_samples": 45000,
+          "candidate_number": 1,
+          "search_number": 1,
+          "candidate_in_search": 1,
+          "search_finished": true
+        },
+        {
+          "baseline_loss": 26.16192854436774,
+          "candidate_loss": 26.519636555575367,
+          "retained_loss": 26.16192854436774,
+          "accepted": false,
+          "mutations": [
+            [
+              2,
+              9,
+              379,
+              3,
+              6
+            ],
+            [
+              3,
+              8,
+              3541,
+              4,
+              0
+            ],
+            [
+              2,
+              80,
+              292,
+              4,
+              7
+            ],
+            [
+              3,
+              5,
+              5624,
+              4,
+              6
+            ],
+            [
+              3,
+              7,
+              7417,
+              4,
+              2
+            ],
+            [
+              2,
+              33,
+              221,
+              4,
+              3
+            ],
+            [
+              2,
+              107,
+              375,
+              4,
+              5
+            ],
+            [
+              2,
+              11,
+              258,
+              4,
+              0
+            ]
+          ],
+          "baseline_samples": 45000,
+          "candidate_samples": 45000,
+          "candidate_number": 2,
+          "search_number": 2,
+          "candidate_in_search": 1,
+          "search_finished": false
+        }
+      ]
+    },
+    {
+      "quant_set": 9,
+      "gradient_first_three_updates": [
+        {
+          "step": 1,
+          "gradient_sha256": "8647fb649e120a2108335f6931bd9101e495856a3c4a0654bf7477e295dd0af8",
+          "shadow_sha256": "63cf42040eb3377fa05c4390c71702f3dda8dca85cb44492bad9c8b0746b1662",
+          "indexes_sha256": "3ea6cbc96b0967081f2bfd0498fa2f5a93a4151f7f8ec538a011a2bf24ba14f4"
+        },
+        {
+          "step": 2,
+          "gradient_sha256": "799ff7281013d93008b2d93a5bf0bedcf7d67a2a85e8c86efdf6fdcba941de71",
+          "shadow_sha256": "2c1a306a8859c0970442254bc9792f48d1cb56601ada9f7c361ca330c0bc9820",
+          "indexes_sha256": "e96a80fdac331aea4dcf07491d37b3fb21d707691f49725bd24287e4de3b182b"
+        },
+        {
+          "step": 3,
+          "gradient_sha256": "59b10468afbb53599e492dcbf8f1b25d67a500713822cdb51aab2630886a234a",
+          "shadow_sha256": "26adba8c3294bdb7e324c9fd4f0c231f434f50ae4636fe7aab20ee6e8d0e0526",
+          "indexes_sha256": "da6107e05bfff3e3e2a3eb49527f13dbb24c59c848f3b147068deaaede8bcaac"
+        }
+      ],
+      "sa_first_two_proposals": [
+        {
+          "baseline_loss": 17.03381226556526,
+          "candidate_loss": 17.047625261104844,
+          "retained_loss": 17.03381226556526,
+          "accepted": false,
+          "mutations": [
+            [
+              3,
+              0,
+              7965,
+              4,
+              8
+            ],
+            [
+              3,
+              2,
+              842,
+              4,
+              6
+            ],
+            [
+              1,
+              33,
+              244,
+              4,
+              3
+            ],
+            [
+              2,
+              84,
+              193,
+              4,
+              2
+            ],
+            [
+              3,
+              5,
+              43,
+              4,
+              5
+            ],
+            [
+              3,
+              4,
+              1591,
+              3,
+              2
+            ],
+            [
+              3,
+              1,
+              4935,
+              4,
+              1
+            ],
+            [
+              2,
+              104,
+              311,
+              4,
+              5
+            ]
+          ],
+          "baseline_samples": 45000,
+          "candidate_samples": 45000,
+          "candidate_number": 1,
+          "search_number": 1,
+          "candidate_in_search": 1,
+          "search_finished": false
+        },
+        {
+          "baseline_loss": 17.03381226556526,
+          "candidate_loss": 17.626368257131105,
+          "retained_loss": 17.03381226556526,
+          "accepted": false,
+          "mutations": [
+            [
+              3,
+              5,
+              5624,
+              4,
+              1
+            ],
+            [
+              3,
+              7,
+              7417,
+              5,
+              6
+            ],
+            [
+              2,
+              33,
+              221,
+              5,
+              7
+            ],
+            [
+              2,
+              107,
+              375,
+              5,
+              6
+            ],
+            [
+              2,
+              11,
+              258,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              35,
+              5,
+              8
+            ],
+            [
+              2,
+              116,
+              447,
+              3,
+              8
+            ],
+            [
+              3,
+              3,
+              6169,
+              4,
+              5
+            ]
+          ],
+          "baseline_samples": 45000,
+          "candidate_samples": 45000,
+          "candidate_number": 2,
+          "search_number": 1,
+          "candidate_in_search": 2,
+          "search_finished": false
+        }
+      ]
+    },
+    {
+      "quant_set": 10,
+      "gradient_first_three_updates": [
+        {
+          "step": 1,
+          "gradient_sha256": "1a9b11fe3a1d1f75e53469616884c52f1f6ad01daabbfd24b0cded891d1f4848",
+          "shadow_sha256": "1914ec8152fb89076a15e926cd8e746407e146e5b0af780fd0137ed22c4a3653",
+          "indexes_sha256": "933818cd8d4b7b9b16d140097ddc7a99b46cc138ea728e3380ec5bf519e021ad"
+        },
+        {
+          "step": 2,
+          "gradient_sha256": "cc4e84e851f835c549baa5d389865ba613fcf67941ca4d03f8f4e9b061c34406",
+          "shadow_sha256": "9473e84e42a377ce89370f3f41fbc2af4085e644a19fe3afb876b8b25da1fcfc",
+          "indexes_sha256": "0724a0b4a553003d2c54301cf0892dece94b7a48ce28bbef7822b33ead699980"
+        },
+        {
+          "step": 3,
+          "gradient_sha256": "d02b0316042959390ddf5b7196cba657aadf344a229d66723830f1411b0af235",
+          "shadow_sha256": "46f67b976c29ef4ac8e3e9a1b0586235e4755bf07b679e142625824e0df6479c",
+          "indexes_sha256": "e87aef2e5a7824af9a3c065040f6cc0726e1feaefa1f515ca361a542d21b95df"
+        }
+      ],
+      "sa_first_two_proposals": [
+        {
+          "baseline_loss": 14.560692004176007,
+          "candidate_loss": 14.308975227428206,
+          "retained_loss": 14.308975227428206,
+          "accepted": true,
+          "mutations": [
+            [
+              3,
+              0,
+              7965,
+              4,
+              8
+            ],
+            [
+              3,
+              2,
+              842,
+              4,
+              6
+            ],
+            [
+              1,
+              33,
+              244,
+              4,
+              3
+            ],
+            [
+              2,
+              84,
+              193,
+              5,
+              9
+            ],
+            [
+              3,
+              5,
+              43,
+              5,
+              2
+            ],
+            [
+              3,
+              4,
+              1591,
+              3,
+              5
+            ],
+            [
+              3,
+              1,
+              4935,
+              4,
+              2
+            ],
+            [
+              2,
+              104,
+              311,
+              5,
+              1
+            ]
+          ],
+          "baseline_samples": 45000,
+          "candidate_samples": 45000,
+          "candidate_number": 1,
+          "search_number": 1,
+          "candidate_in_search": 1,
+          "search_finished": true
+        },
+        {
+          "baseline_loss": 14.308975227428206,
+          "candidate_loss": 14.0948769245595,
+          "retained_loss": 14.0948769245595,
+          "accepted": true,
+          "mutations": [
+            [
+              3,
+              8,
+              3541,
+              5,
+              6
+            ],
+            [
+              2,
+              80,
+              292,
+              5,
+              8
+            ],
+            [
+              3,
+              5,
+              5624,
+              5,
+              9
+            ],
+            [
+              3,
+              7,
+              7417,
+              6,
+              1
+            ],
+            [
+              2,
+              33,
+              221,
+              5,
+              6
+            ],
+            [
+              2,
+              107,
+              375,
+              5,
+              7
+            ],
+            [
+              2,
+              11,
+              258,
+              5,
+              6
+            ],
+            [
+              2,
+              0,
+              35,
+              6,
+              3
+            ]
+          ],
+          "baseline_samples": 45000,
+          "candidate_samples": 45000,
+          "candidate_number": 2,
+          "search_number": 2,
+          "candidate_in_search": 1,
+          "search_finished": true
+        }
+      ]
+    },
+    {
+      "quant_set": 11,
+      "gradient_first_three_updates": [
+        {
+          "step": 1,
+          "gradient_sha256": "25c38e5f6bb8d14a44836d55867c95f356eed1c9a732286f44b33faa513686ac",
+          "shadow_sha256": "4d6d75ff3a7a0e61e89157a763839649ed534bedc1c789e8f842444efaa8be69",
+          "indexes_sha256": "b244e1abe6d6192bf3402178b3d9870559390254cd295811a58bd534b02a5c09"
+        },
+        {
+          "step": 2,
+          "gradient_sha256": "012512f28f713befc00fa3a36cf3d15fd72c4c942494eba60ca5f74f7a714088",
+          "shadow_sha256": "c504c8cddbd22226de3c466e078d462f845cefb77d100a5d518b3e7fcdfb751a",
+          "indexes_sha256": "3f7df2425eb6c90c95e413049f7e8f8f7e6e64c2cd2f01173163d06481f2f59b"
+        },
+        {
+          "step": 3,
+          "gradient_sha256": "6e677666cb7bfbe11352452756262c66afad7a3200d9b171bb26d6bbd5baef97",
+          "shadow_sha256": "e26f62fd10d87ca0a21431e29c2f1bf9b22fbc463e09cb57cbca2fb7877bff93",
+          "indexes_sha256": "129d25625c4ab7c5e98b0b8413b855ff798b06f418850feb8b7321b39bf9b869"
+        }
+      ],
+      "sa_first_two_proposals": [
+        {
+          "baseline_loss": 9.223700895622546,
+          "candidate_loss": 9.274046611993864,
+          "retained_loss": 9.223700895622546,
+          "accepted": false,
+          "mutations": [
+            [
+              3,
+              0,
+              7965,
+              5,
+              8
+            ],
+            [
+              3,
+              2,
+              842,
+              5,
+              6
+            ],
+            [
+              1,
+              33,
+              244,
+              5,
+              10
+            ],
+            [
+              2,
+              84,
+              193,
+              5,
+              3
+            ],
+            [
+              3,
+              5,
+              43,
+              5,
+              9
+            ],
+            [
+              3,
+              4,
+              1591,
+              3,
+              2
+            ],
+            [
+              3,
+              1,
+              4935,
+              5,
+              4
+            ],
+            [
+              2,
+              104,
+              311,
+              5,
+              2
+            ]
+          ],
+          "baseline_samples": 45000,
+          "candidate_samples": 45000,
+          "candidate_number": 1,
+          "search_number": 1,
+          "candidate_in_search": 1,
+          "search_finished": false
+        },
+        {
+          "baseline_loss": 9.223700895622546,
+          "candidate_loss": 9.184547097936985,
+          "retained_loss": 9.184547097936985,
+          "accepted": true,
+          "mutations": [
+            [
+              2,
+              9,
+              379,
+              4,
+              1
+            ],
+            [
+              3,
+              8,
+              3541,
+              6,
+              5
+            ],
+            [
+              2,
+              80,
+              292,
+              6,
+              8
+            ],
+            [
+              3,
+              5,
+              5624,
+              6,
+              9
+            ],
+            [
+              3,
+              7,
+              7417,
+              7,
+              1
+            ],
+            [
+              2,
+              33,
+              221,
+              6,
+              5
+            ],
+            [
+              2,
+              107,
+              375,
+              6,
+              7
+            ],
+            [
+              2,
+              11,
+              258,
+              6,
+              5
+            ]
+          ],
+          "baseline_samples": 45000,
+          "candidate_samples": 45000,
+          "candidate_number": 2,
+          "search_number": 1,
+          "candidate_in_search": 2,
+          "search_finished": true
+        }
+      ]
+    }
+  ]
+}

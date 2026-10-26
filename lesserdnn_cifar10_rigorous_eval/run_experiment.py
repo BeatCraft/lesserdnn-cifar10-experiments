@@ -103,7 +103,7 @@ def check_python_environment() -> None:
     if not missing_modules:
         return
     packages = sorted({REQUIRED_MODULES[module] for module in missing_modules})
-    install_command = f"{sys.executable} -m pip install -r {PROJECT_ROOT / 'requirements.txt'}"
+    install_command = f"{sys.executable} -m pip install -r {PROJECT_ROOT.parent / 'requirements.txt'}"
     raise RuntimeError(
         "current Python environment is missing required modules: "
         f"{', '.join(missing_modules)}\n"

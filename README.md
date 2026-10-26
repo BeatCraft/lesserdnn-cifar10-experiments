@@ -6,6 +6,11 @@ This repository-ready package contains the code and aggregate results for the CI
 **Gradient-Guided Learning for LesserDNN with Quantized Weights**. It includes the LesserDNN
 Metal implementation, three gradient update modes, and a controlled full-precision PyTorch reference.
 
+The working tree also includes the **80-run, 8/9/10/11-level strict-search versus Gradient
+comparison prepared for the paper revision**. Its validation-only, 30-minute protocol is separate
+from the original 300-epoch, test-evaluated Gradient-mode comparison. The additional experiment
+is an unreleased addition; the `v1.0.0` DOI below identifies the earlier archived release.
+
 ## What is included
 
 - LesserDNN training with quantized forward weights and float32 shadow weights.
@@ -14,6 +19,8 @@ Metal implementation, three gradient update modes, and a controlled full-precisi
 - Resumable 10-seed experiment drivers.
 - A full-precision PyTorch reference with the same bias-free CNN topology.
 - Per-seed aggregate CSV files and statistical summaries used for reporting.
+- All 80 completed time-budget runs, 560 validation observations, paired codebook comparisons,
+  and standalone rerun/analysis tools under [`additional_experiments/`](additional_experiments/README.md).
 
 CIFAR-10 images, raw checkpoints, and per-example predictions are intentionally excluded.
 
@@ -32,6 +39,7 @@ CIFAR-10 images, raw checkpoints, and per-example predictions are intentionally 
 │   └── *_core.py                     # Self-contained PyTorch shared code
 ├── results/                          # Aggregate, lightweight published results
 ├── configs/                          # Machine-readable formal protocols
+├── additional_experiments/           # Strict-search/Gradient, four codebooks, timed protocol
 ├── download_cifar10.py
 ├── run_smoke_tests.sh
 ├── run_ldnn_three_stage_10seeds.sh
@@ -53,6 +61,13 @@ Linear(128*8*8 -> 10)
 
 Batch normalization and data augmentation are disabled. Inputs are normalized with CIFAR-10 channel
 means `(0.4914, 0.4822, 0.4465)` and standard deviations `(0.2470, 0.2435, 0.2616)`.
+
+The original Gradient-mode comparison uses nine levels and **fan-in-aware sparse initialization**.
+For fan-in `n`, the initializer targets a second moment of `2/n`, selects the positive codebook
+value `a` closest to `sqrt(2/n)`, and assigns each weight `+a` or `-a` with probability
+`min(1, (2/n)/a²)/2` each, otherwise zero. Shadow weights start from these discrete weights.
+See [the full initialization specification](REPRODUCIBILITY.md#initialization).
+The additional timed comparison instead uses uniform initialization restricted to `|w| ≤ 0.125`.
 
 ## Platform and environment
 
@@ -137,6 +152,29 @@ MPS when available and otherwise uses CPU.
 All drivers resume at epoch boundaries. Re-run the same command after an interruption. Do not reuse an
 output directory with changed arguments.
 
+## Additional codebook/optimizer comparison
+
+The 80-run experiment uses **four codebooks × two optimizers × ten seeds**, with 30 minutes
+of net training per run (40 hours total plus setup/evaluation/saving). It uses only the
+batched Metal forward implementation, with unchanged native backward kernels.
+
+```bash
+# Review the 80 jobs without starting training or requiring the dataset.
+python3 additional_experiments/run_experiment.py --dry-run
+
+# Recompute the published 80-run statistics without training or loading CIFAR-10.
+python3 additional_experiments/analyze_results.py
+
+# Optional figure generation.
+python3 -m pip install -r requirements-analysis.txt
+python3 additional_experiments/analyze_results.py --plot
+```
+
+See [`additional_experiments/README.md`](additional_experiments/README.md) for native verification,
+the full rerun command, initialization, stopping/resume behavior and fairness limitations.
+The label `SA` in the result tables denotes **strict first-improvement random search** here:
+it does not use temperature or accept worsening candidates.
+
 ## Evaluation protocol
 
 - Seeds: 0 through 9.
@@ -167,6 +205,24 @@ the same 350 mini-batches but perform 175 updates per epoch.
 Detailed seed-level results and confidence intervals are under [`results/`](results/). The PyTorch run uses
 50 epochs whereas LesserDNN uses 300; cross-framework values are therefore a descriptive comparison of
 attained performance, not evidence that either framework is superior under an equal training budget.
+
+The PyTorch SGD/50-epoch reference in this table is a separate controlled reference provided by the
+artifact. The manuscript's historical Adam/20-epoch reference (73.16%) is a different experiment;
+these values and protocols must not be substituted for each other. See [the experiment map](EXPERIMENTS.md).
+
+The additional timed comparison reports **validation**, not test, metrics:
+
+| Levels | SA validation CE | SA accuracy | Gradient validation CE | Gradient accuracy |
+|---|---:|---:|---:|---:|
+| 8 | 14.8035 | 12.95% | 1.5254 | 46.65% |
+| 9 | 7.1083 | 13.07% | 1.1627 | 60.39% |
+| 10 | 6.1657 | 12.39% | 1.1609 | 61.80% |
+| 11 | 4.2274 | 13.65% | 1.0819 | 65.15% |
+
+Each entry is the mean of ten seeds at the 30-minute endpoint. SDs, paired differences and complete
+learning curves are in [`results/timed_codebooks_80runs/`](results/timed_codebooks_80runs/SUMMARY.md).
+Codebooks also change the uniform initial distribution, and the codebook series were collected
+sequentially; this experiment does not isolate a pure causal effect of zero or small weights.
 
 ## Citation
 

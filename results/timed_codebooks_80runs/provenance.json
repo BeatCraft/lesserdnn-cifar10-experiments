@@ -1,0 +1,794 @@
+{
+  "path_policy": "Local absolute paths replaced with logical artifact-relative labels; hashes are original file hashes.",
+  "source_manifests": [
+    {
+      "source_series": "uniform_max0125_10seeds_30min_20261024",
+      "original_manifest_sha256": "f595bbe8bfa5048752c3798f1b5dd078df2ba02d9541d62c1d792f80fe8dd3cc",
+      "manifest": {
+        "created_at_jst": "2026-10-24T23:52:04.391972+09:00",
+        "configuration": {
+          "initialization": "independent uniform codebook indexes",
+          "max_init_abs": 0.125,
+          "training_codebook_unchanged": true,
+          "initialization_preflight_sha256": "7baa87f88baf64472c3eb774ab2e59387d5f5e91c33f88baaceb1d670ebffb1c",
+          "model_weights": 174944,
+          "metal_execution": "batched",
+          "training_budget_s": 1800.0,
+          "checkpoint_interval_s": 300.0,
+          "sa_mutation_count": 8,
+          "sa_max_candidates": 100,
+          "sa_logical_batch_size": 45000,
+          "forward_chunk_size": 128,
+          "conditions": {
+            "A": "SA Q9",
+            "B": "SA Q10",
+            "C": "Gradient Q9",
+            "D": "Gradient Q10"
+          },
+          "seed_count": 10,
+          "planned_runs": 40,
+          "planned_training_hours": 20,
+          "run_order": [
+            {
+              "condition": "A",
+              "seed": 0,
+              "method": "sa",
+              "quant_set": 9,
+              "run_name": "A_seed0"
+            },
+            {
+              "condition": "C",
+              "seed": 0,
+              "method": "gradient",
+              "quant_set": 9,
+              "run_name": "C_seed0"
+            },
+            {
+              "condition": "D",
+              "seed": 0,
+              "method": "gradient",
+              "quant_set": 10,
+              "run_name": "D_seed0"
+            },
+            {
+              "condition": "B",
+              "seed": 0,
+              "method": "sa",
+              "quant_set": 10,
+              "run_name": "B_seed0"
+            },
+            {
+              "condition": "B",
+              "seed": 1,
+              "method": "sa",
+              "quant_set": 10,
+              "run_name": "B_seed1"
+            },
+            {
+              "condition": "D",
+              "seed": 1,
+              "method": "gradient",
+              "quant_set": 10,
+              "run_name": "D_seed1"
+            },
+            {
+              "condition": "C",
+              "seed": 1,
+              "method": "gradient",
+              "quant_set": 9,
+              "run_name": "C_seed1"
+            },
+            {
+              "condition": "A",
+              "seed": 1,
+              "method": "sa",
+              "quant_set": 9,
+              "run_name": "A_seed1"
+            },
+            {
+              "condition": "C",
+              "seed": 2,
+              "method": "gradient",
+              "quant_set": 9,
+              "run_name": "C_seed2"
+            },
+            {
+              "condition": "A",
+              "seed": 2,
+              "method": "sa",
+              "quant_set": 9,
+              "run_name": "A_seed2"
+            },
+            {
+              "condition": "B",
+              "seed": 2,
+              "method": "sa",
+              "quant_set": 10,
+              "run_name": "B_seed2"
+            },
+            {
+              "condition": "D",
+              "seed": 2,
+              "method": "gradient",
+              "quant_set": 10,
+              "run_name": "D_seed2"
+            },
+            {
+              "condition": "D",
+              "seed": 3,
+              "method": "gradient",
+              "quant_set": 10,
+              "run_name": "D_seed3"
+            },
+            {
+              "condition": "B",
+              "seed": 3,
+              "method": "sa",
+              "quant_set": 10,
+              "run_name": "B_seed3"
+            },
+            {
+              "condition": "A",
+              "seed": 3,
+              "method": "sa",
+              "quant_set": 9,
+              "run_name": "A_seed3"
+            },
+            {
+              "condition": "C",
+              "seed": 3,
+              "method": "gradient",
+              "quant_set": 9,
+              "run_name": "C_seed3"
+            },
+            {
+              "condition": "A",
+              "seed": 4,
+              "method": "sa",
+              "quant_set": 9,
+              "run_name": "A_seed4"
+            },
+            {
+              "condition": "C",
+              "seed": 4,
+              "method": "gradient",
+              "quant_set": 9,
+              "run_name": "C_seed4"
+            },
+            {
+              "condition": "D",
+              "seed": 4,
+              "method": "gradient",
+              "quant_set": 10,
+              "run_name": "D_seed4"
+            },
+            {
+              "condition": "B",
+              "seed": 4,
+              "method": "sa",
+              "quant_set": 10,
+              "run_name": "B_seed4"
+            },
+            {
+              "condition": "B",
+              "seed": 5,
+              "method": "sa",
+              "quant_set": 10,
+              "run_name": "B_seed5"
+            },
+            {
+              "condition": "D",
+              "seed": 5,
+              "method": "gradient",
+              "quant_set": 10,
+              "run_name": "D_seed5"
+            },
+            {
+              "condition": "C",
+              "seed": 5,
+              "method": "gradient",
+              "quant_set": 9,
+              "run_name": "C_seed5"
+            },
+            {
+              "condition": "A",
+              "seed": 5,
+              "method": "sa",
+              "quant_set": 9,
+              "run_name": "A_seed5"
+            },
+            {
+              "condition": "C",
+              "seed": 6,
+              "method": "gradient",
+              "quant_set": 9,
+              "run_name": "C_seed6"
+            },
+            {
+              "condition": "A",
+              "seed": 6,
+              "method": "sa",
+              "quant_set": 9,
+              "run_name": "A_seed6"
+            },
+            {
+              "condition": "B",
+              "seed": 6,
+              "method": "sa",
+              "quant_set": 10,
+              "run_name": "B_seed6"
+            },
+            {
+              "condition": "D",
+              "seed": 6,
+              "method": "gradient",
+              "quant_set": 10,
+              "run_name": "D_seed6"
+            },
+            {
+              "condition": "D",
+              "seed": 7,
+              "method": "gradient",
+              "quant_set": 10,
+              "run_name": "D_seed7"
+            },
+            {
+              "condition": "B",
+              "seed": 7,
+              "method": "sa",
+              "quant_set": 10,
+              "run_name": "B_seed7"
+            },
+            {
+              "condition": "A",
+              "seed": 7,
+              "method": "sa",
+              "quant_set": 9,
+              "run_name": "A_seed7"
+            },
+            {
+              "condition": "C",
+              "seed": 7,
+              "method": "gradient",
+              "quant_set": 9,
+              "run_name": "C_seed7"
+            },
+            {
+              "condition": "A",
+              "seed": 8,
+              "method": "sa",
+              "quant_set": 9,
+              "run_name": "A_seed8"
+            },
+            {
+              "condition": "C",
+              "seed": 8,
+              "method": "gradient",
+              "quant_set": 9,
+              "run_name": "C_seed8"
+            },
+            {
+              "condition": "D",
+              "seed": 8,
+              "method": "gradient",
+              "quant_set": 10,
+              "run_name": "D_seed8"
+            },
+            {
+              "condition": "B",
+              "seed": 8,
+              "method": "sa",
+              "quant_set": 10,
+              "run_name": "B_seed8"
+            },
+            {
+              "condition": "B",
+              "seed": 9,
+              "method": "sa",
+              "quant_set": 10,
+              "run_name": "B_seed9"
+            },
+            {
+              "condition": "D",
+              "seed": 9,
+              "method": "gradient",
+              "quant_set": 10,
+              "run_name": "D_seed9"
+            },
+            {
+              "condition": "C",
+              "seed": 9,
+              "method": "gradient",
+              "quant_set": 9,
+              "run_name": "C_seed9"
+            },
+            {
+              "condition": "A",
+              "seed": 9,
+              "method": "sa",
+              "quant_set": 9,
+              "run_name": "A_seed9"
+            }
+          ],
+          "source_sha256": {
+            "experiment_workspace/experiments/run_paper_batched_comparison.py": "bd9d78a354108884973e1744cce6b22d8d6df8ead2a69b6342530f121c92c81a",
+            "experiment_workspace/experiments/paper_batched_sa.py": "a1d3638abeb2eb1d961cbc1aa8024ed01b402be4d466d57642948c5ea6bd0516",
+            "experiment_workspace/experiments/batched_paper_cnn_metal.py": "c0d87d2b671481d16d6a96f51b91eb86cffc45ccb281d3b22a13782cb240bea1",
+            "experiment_workspace/experiments/run_comparison.py": "444041cdc36ddbe341f7ca00d0b4f1f2ee540274f7d7d5e4d3fba4cc3f387c33",
+            "experiment_workspace/experiments/full_batch_search.py": "a819281148900ea9b5de63939632e9a7922975e63f8ddc50ff286b073a9a45f8",
+            "experiment_workspace/experiments/cached_first_improvement_search.py": "14b426b1947f4f7d51f0ce96269d3254127a9f3952ccb11f3560b02cb7a207b7",
+            "experiment_workspace/experiments/first_improvement_search.py": "3c1445720f015a11e837f53e66b58f3b404426876eabadbc1140266c80aefb69",
+            "experiment_workspace/experiments/simple_batch_search.py": "335d7a96ed18ee868cb9648adbbb89ca175255ad2846359b16e2d3f43f5c2433",
+            "experiment_workspace/experiments/metal_first_improvement_search.py": "af40b4c852f87dd3db21c509d0ac037a10a7e6397e504372e15d31cc3d6e109b",
+            "experiment_workspace/experiments/pilot_comparisons.py": "88443211455a939806d704e8b0a1b453116f922dc2944f3a6dc7c2f78d47b3b0",
+            "public_repository/lesserdnn_cifar10_ablation_200/ldnn_cifar10_model.py": "dec9e233bcdb12dda250180c32c63db7975dd05f86b4f4f60d700631e50f1d54",
+            "public_repository/lesserdnn_cifar10_ablation_200/train_ldnn_cifar10.py": "ad925ff54bd7a7e57d700769f9b4ee2fb4eac39f950a855bc12317634b243c6a",
+            "public_repository/lesserdnn_cifar10_ablation_200/verify_pytorch_batch_ldnn.py": "2393212e1b77b0350c93ace698ee3f736be3b02796cd3acefc17c96bec33c6fd",
+            "public_repository/lesserdnn_cifar10_ablation_200/experiments/ldnn_cifar10_native_same_sign/train.py": "e22ba1dfc8576909b2b55f4f90696ced65832402dbb18826ddcfbc4274f285cb",
+            "public_repository/lesserdnn_cifar10_ablation_200/ldnn_runtime/core.py": "8231fa2f958d19000ff40975e2c7014bd15ec6af884bfc0a109b7c6fabbff01e",
+            "public_repository/lesserdnn_cifar10_ablation_200/ldnn_runtime/lmetal.py": "28a5d670ada2945fb1a9970e5d95deb93d30612d0aca0691a432d8d02863c8e9",
+            "public_repository/lesserdnn_cifar10_rigorous_eval/train_one.py": "037cf098cebe595ada28ce57ba262df555265148cab0fe14dee5c8639d1b3472",
+            "experiment_workspace/experiments/run_uniform_index_pilot.py": "ce97a872dc27036d795e27d98a713506067c6ebec93d5c2755158c2b2f12c8d0",
+            "experiment_workspace/experiments/review_uniform_index_initialization.py": "3f7b868080c20721e619527411441e4da49d4bf05a8056c0e3e2bb8df636a074",
+            "experiment_workspace/experiments/review_paper_initialization.py": "4cc2f3b4dabaa927b8ed02957a804cb93aa55ac50c5e53560d223ffd807e4290",
+            "experiment_workspace/experiments/run_uniform_max0125_queue.py": "f71423d99f0c5732b9c68cb876eae0921fbd706d4c51a8535dbe853acb072ff5"
+          },
+          "training_dataset_sha256": {
+            "data/cifar-10-batches-py/data_batch_1": "54636561a3ce25bd3e19253c6b0d8538147b0ae398331ac4a2d86c6d987368cd",
+            "data/cifar-10-batches-py/data_batch_2": "766b2cef9fbc745cf056b3152224f7cf77163b330ea9a15f9392beb8b89bc5a8",
+            "data/cifar-10-batches-py/data_batch_3": "0f00d98ebfb30b3ec0ad19f9756dc2630b89003e10525f5e148445e82aa6a1f9",
+            "data/cifar-10-batches-py/data_batch_4": "3f7bb240661948b8f4d53e36ec720d8306f5668bd0071dcb4e6c947f78e9682b",
+            "data/cifar-10-batches-py/data_batch_5": "d91802434d8376bbaeeadf58a737e3a1b12ac839077e931237e0dcd43adcb154"
+          },
+          "preflight_sha256": "7eadbc8089f85f85bb05f58d48982f6d81ca30cb0b639b27fe522add96953b25",
+          "runner_verification_sha256": "8e80ffd5c6e3560abe90817193a54dca7ce4d5ca70d9bf905cfe14d26ced095c",
+          "test_used": false,
+          "version": 1
+        }
+      }
+    },
+    {
+      "source_series": "q11_10seeds_30min_20261025",
+      "original_manifest_sha256": "cfad091449d6bad4f9cc497c3b4d1e86268a92b38f56280c16efcb04609e99bd",
+      "manifest": {
+        "created_at_jst": "2026-10-25T20:12:37.550886+09:00",
+        "configuration": {
+          "codebook": [
+            -1.0,
+            -0.5,
+            -0.25,
+            -0.125,
+            -0.0625,
+            0.0,
+            0.0625,
+            0.125,
+            0.25,
+            0.5,
+            1.0
+          ],
+          "initialization_levels": [
+            -0.125,
+            -0.0625,
+            0.0,
+            0.0625,
+            0.125
+          ],
+          "initialization": "independent uniform indexes, each probability 1/5",
+          "seed_count": 10,
+          "planned_runs": 20,
+          "training_budget_s": 1800.0,
+          "checkpoint_interval_s": 300.0,
+          "planned_training_hours": 10,
+          "model_weights": 174944,
+          "metal_execution": "batched",
+          "test_used": false,
+          "sa_mutation_count": 8,
+          "sa_max_candidates": 100,
+          "sa_logical_batch_size": 45000,
+          "forward_chunk_size": 128,
+          "run_order": [
+            {
+              "seed": 0,
+              "method": "sa",
+              "quant_set": 11,
+              "condition": "E",
+              "run_name": "E_seed0"
+            },
+            {
+              "seed": 0,
+              "method": "gradient",
+              "quant_set": 11,
+              "condition": "F",
+              "run_name": "F_seed0"
+            },
+            {
+              "seed": 1,
+              "method": "gradient",
+              "quant_set": 11,
+              "condition": "F",
+              "run_name": "F_seed1"
+            },
+            {
+              "seed": 1,
+              "method": "sa",
+              "quant_set": 11,
+              "condition": "E",
+              "run_name": "E_seed1"
+            },
+            {
+              "seed": 2,
+              "method": "sa",
+              "quant_set": 11,
+              "condition": "E",
+              "run_name": "E_seed2"
+            },
+            {
+              "seed": 2,
+              "method": "gradient",
+              "quant_set": 11,
+              "condition": "F",
+              "run_name": "F_seed2"
+            },
+            {
+              "seed": 3,
+              "method": "gradient",
+              "quant_set": 11,
+              "condition": "F",
+              "run_name": "F_seed3"
+            },
+            {
+              "seed": 3,
+              "method": "sa",
+              "quant_set": 11,
+              "condition": "E",
+              "run_name": "E_seed3"
+            },
+            {
+              "seed": 4,
+              "method": "sa",
+              "quant_set": 11,
+              "condition": "E",
+              "run_name": "E_seed4"
+            },
+            {
+              "seed": 4,
+              "method": "gradient",
+              "quant_set": 11,
+              "condition": "F",
+              "run_name": "F_seed4"
+            },
+            {
+              "seed": 5,
+              "method": "gradient",
+              "quant_set": 11,
+              "condition": "F",
+              "run_name": "F_seed5"
+            },
+            {
+              "seed": 5,
+              "method": "sa",
+              "quant_set": 11,
+              "condition": "E",
+              "run_name": "E_seed5"
+            },
+            {
+              "seed": 6,
+              "method": "sa",
+              "quant_set": 11,
+              "condition": "E",
+              "run_name": "E_seed6"
+            },
+            {
+              "seed": 6,
+              "method": "gradient",
+              "quant_set": 11,
+              "condition": "F",
+              "run_name": "F_seed6"
+            },
+            {
+              "seed": 7,
+              "method": "gradient",
+              "quant_set": 11,
+              "condition": "F",
+              "run_name": "F_seed7"
+            },
+            {
+              "seed": 7,
+              "method": "sa",
+              "quant_set": 11,
+              "condition": "E",
+              "run_name": "E_seed7"
+            },
+            {
+              "seed": 8,
+              "method": "sa",
+              "quant_set": 11,
+              "condition": "E",
+              "run_name": "E_seed8"
+            },
+            {
+              "seed": 8,
+              "method": "gradient",
+              "quant_set": 11,
+              "condition": "F",
+              "run_name": "F_seed8"
+            },
+            {
+              "seed": 9,
+              "method": "gradient",
+              "quant_set": 11,
+              "condition": "F",
+              "run_name": "F_seed9"
+            },
+            {
+              "seed": 9,
+              "method": "sa",
+              "quant_set": 11,
+              "condition": "E",
+              "run_name": "E_seed9"
+            }
+          ],
+          "source_sha256": {
+            "experiment_workspace/experiments/run_paper_batched_comparison.py": "bd9d78a354108884973e1744cce6b22d8d6df8ead2a69b6342530f121c92c81a",
+            "experiment_workspace/experiments/paper_batched_sa.py": "a1d3638abeb2eb1d961cbc1aa8024ed01b402be4d466d57642948c5ea6bd0516",
+            "experiment_workspace/experiments/batched_paper_cnn_metal.py": "c0d87d2b671481d16d6a96f51b91eb86cffc45ccb281d3b22a13782cb240bea1",
+            "experiment_workspace/experiments/run_comparison.py": "444041cdc36ddbe341f7ca00d0b4f1f2ee540274f7d7d5e4d3fba4cc3f387c33",
+            "experiment_workspace/experiments/full_batch_search.py": "a819281148900ea9b5de63939632e9a7922975e63f8ddc50ff286b073a9a45f8",
+            "experiment_workspace/experiments/cached_first_improvement_search.py": "14b426b1947f4f7d51f0ce96269d3254127a9f3952ccb11f3560b02cb7a207b7",
+            "experiment_workspace/experiments/first_improvement_search.py": "3c1445720f015a11e837f53e66b58f3b404426876eabadbc1140266c80aefb69",
+            "experiment_workspace/experiments/simple_batch_search.py": "335d7a96ed18ee868cb9648adbbb89ca175255ad2846359b16e2d3f43f5c2433",
+            "experiment_workspace/experiments/metal_first_improvement_search.py": "af40b4c852f87dd3db21c509d0ac037a10a7e6397e504372e15d31cc3d6e109b",
+            "experiment_workspace/experiments/pilot_comparisons.py": "88443211455a939806d704e8b0a1b453116f922dc2944f3a6dc7c2f78d47b3b0",
+            "public_repository/lesserdnn_cifar10_ablation_200/ldnn_cifar10_model.py": "dec9e233bcdb12dda250180c32c63db7975dd05f86b4f4f60d700631e50f1d54",
+            "public_repository/lesserdnn_cifar10_ablation_200/train_ldnn_cifar10.py": "ad925ff54bd7a7e57d700769f9b4ee2fb4eac39f950a855bc12317634b243c6a",
+            "public_repository/lesserdnn_cifar10_ablation_200/verify_pytorch_batch_ldnn.py": "2393212e1b77b0350c93ace698ee3f736be3b02796cd3acefc17c96bec33c6fd",
+            "public_repository/lesserdnn_cifar10_ablation_200/experiments/ldnn_cifar10_native_same_sign/train.py": "e22ba1dfc8576909b2b55f4f90696ced65832402dbb18826ddcfbc4274f285cb",
+            "public_repository/lesserdnn_cifar10_ablation_200/ldnn_runtime/core.py": "8231fa2f958d19000ff40975e2c7014bd15ec6af884bfc0a109b7c6fabbff01e",
+            "public_repository/lesserdnn_cifar10_ablation_200/ldnn_runtime/lmetal.py": "28a5d670ada2945fb1a9970e5d95deb93d30612d0aca0691a432d8d02863c8e9",
+            "public_repository/lesserdnn_cifar10_rigorous_eval/train_one.py": "037cf098cebe595ada28ce57ba262df555265148cab0fe14dee5c8639d1b3472",
+            "experiment_workspace/experiments/run_q11_comparison.py": "260c5017b576d4cf1aa1f1eb19969a5d117efeeee1ec9a04bc56e8ef69615b4d",
+            "experiment_workspace/experiments/run_q11_queue.py": "fa367a971a7246864ae348943d6dd6b1be39ebeef695ca6d592a2930baeabd4b",
+            "experiment_workspace/experiments/run_paper_batched_queue.py": "d4a2b69f00629d71dd1ec9f8178cb23e277a7e411e03cbe69e5c50ffb1ac1e90"
+          },
+          "input_sha256": {
+            "data/cifar-10-batches-py/data_batch_1": "54636561a3ce25bd3e19253c6b0d8538147b0ae398331ac4a2d86c6d987368cd",
+            "data/cifar-10-batches-py/data_batch_2": "766b2cef9fbc745cf056b3152224f7cf77163b330ea9a15f9392beb8b89bc5a8",
+            "data/cifar-10-batches-py/data_batch_3": "0f00d98ebfb30b3ec0ad19f9756dc2630b89003e10525f5e148445e82aa6a1f9",
+            "data/cifar-10-batches-py/data_batch_4": "3f7bb240661948b8f4d53e36ec720d8306f5668bd0071dcb4e6c947f78e9682b",
+            "data/cifar-10-batches-py/data_batch_5": "d91802434d8376bbaeeadf58a737e3a1b12ac839077e931237e0dcd43adcb154",
+            "experiment_workspace/reports/soict_comparisons/reevaluations/uniform_max0125_10seeds_30min_20261024/summary.json": "08cedf164faeb5e086a49de6b1f0e1e5666e753754f224298e866d2d332bcf7b",
+            "experiment_workspace/reports/soict_comparisons/q11_preflight_20261025.json": "7405f17cbb6fc0154e1e55de93d8ce17f4bce6f6e1117e79ae1c9ce139694f6b"
+          },
+          "reference_root": "experiment_workspace/reports/soict_comparisons/reevaluations/uniform_max0125_10seeds_30min_20261024"
+        }
+      }
+    },
+    {
+      "source_series": "q8_10seeds_30min_20261026",
+      "original_manifest_sha256": "f34a703876406034c724e071f7c46fdad7fe52d93a9cedcfa604747932425753",
+      "manifest": {
+        "created_at_jst": "2026-10-26T09:00:09.175689+09:00",
+        "configuration": {
+          "codebook": [
+            -1.0,
+            -0.5,
+            -0.25,
+            -0.125,
+            0.125,
+            0.25,
+            0.5,
+            1.0
+          ],
+          "initialization_levels": [
+            -0.125,
+            0.125
+          ],
+          "initialization": "independent uniform indexes, each probability 1/2",
+          "seed_count": 10,
+          "planned_runs": 20,
+          "training_budget_s": 1800.0,
+          "checkpoint_interval_s": 300.0,
+          "planned_training_hours": 10,
+          "model_weights": 174944,
+          "metal_execution": "batched",
+          "test_used": false,
+          "sa_mutation_count": 8,
+          "sa_max_candidates": 100,
+          "sa_logical_batch_size": 45000,
+          "forward_chunk_size": 128,
+          "run_order": [
+            {
+              "seed": 0,
+              "method": "sa",
+              "quant_set": 8,
+              "condition": "G",
+              "run_name": "G_seed0"
+            },
+            {
+              "seed": 0,
+              "method": "gradient",
+              "quant_set": 8,
+              "condition": "H",
+              "run_name": "H_seed0"
+            },
+            {
+              "seed": 1,
+              "method": "gradient",
+              "quant_set": 8,
+              "condition": "H",
+              "run_name": "H_seed1"
+            },
+            {
+              "seed": 1,
+              "method": "sa",
+              "quant_set": 8,
+              "condition": "G",
+              "run_name": "G_seed1"
+            },
+            {
+              "seed": 2,
+              "method": "sa",
+              "quant_set": 8,
+              "condition": "G",
+              "run_name": "G_seed2"
+            },
+            {
+              "seed": 2,
+              "method": "gradient",
+              "quant_set": 8,
+              "condition": "H",
+              "run_name": "H_seed2"
+            },
+            {
+              "seed": 3,
+              "method": "gradient",
+              "quant_set": 8,
+              "condition": "H",
+              "run_name": "H_seed3"
+            },
+            {
+              "seed": 3,
+              "method": "sa",
+              "quant_set": 8,
+              "condition": "G",
+              "run_name": "G_seed3"
+            },
+            {
+              "seed": 4,
+              "method": "sa",
+              "quant_set": 8,
+              "condition": "G",
+              "run_name": "G_seed4"
+            },
+            {
+              "seed": 4,
+              "method": "gradient",
+              "quant_set": 8,
+              "condition": "H",
+              "run_name": "H_seed4"
+            },
+            {
+              "seed": 5,
+              "method": "gradient",
+              "quant_set": 8,
+              "condition": "H",
+              "run_name": "H_seed5"
+            },
+            {
+              "seed": 5,
+              "method": "sa",
+              "quant_set": 8,
+              "condition": "G",
+              "run_name": "G_seed5"
+            },
+            {
+              "seed": 6,
+              "method": "sa",
+              "quant_set": 8,
+              "condition": "G",
+              "run_name": "G_seed6"
+            },
+            {
+              "seed": 6,
+              "method": "gradient",
+              "quant_set": 8,
+              "condition": "H",
+              "run_name": "H_seed6"
+            },
+            {
+              "seed": 7,
+              "method": "gradient",
+              "quant_set": 8,
+              "condition": "H",
+              "run_name": "H_seed7"
+            },
+            {
+              "seed": 7,
+              "method": "sa",
+              "quant_set": 8,
+              "condition": "G",
+              "run_name": "G_seed7"
+            },
+            {
+              "seed": 8,
+              "method": "sa",
+              "quant_set": 8,
+              "condition": "G",
+              "run_name": "G_seed8"
+            },
+            {
+              "seed": 8,
+              "method": "gradient",
+              "quant_set": 8,
+              "condition": "H",
+              "run_name": "H_seed8"
+            },
+            {
+              "seed": 9,
+              "method": "gradient",
+              "quant_set": 8,
+              "condition": "H",
+              "run_name": "H_seed9"
+            },
+            {
+              "seed": 9,
+              "method": "sa",
+              "quant_set": 8,
+              "condition": "G",
+              "run_name": "G_seed9"
+            }
+          ],
+          "source_sha256": {
+            "experiment_workspace/experiments/run_paper_batched_comparison.py": "bd9d78a354108884973e1744cce6b22d8d6df8ead2a69b6342530f121c92c81a",
+            "experiment_workspace/experiments/paper_batched_sa.py": "a1d3638abeb2eb1d961cbc1aa8024ed01b402be4d466d57642948c5ea6bd0516",
+            "experiment_workspace/experiments/batched_paper_cnn_metal.py": "c0d87d2b671481d16d6a96f51b91eb86cffc45ccb281d3b22a13782cb240bea1",
+            "experiment_workspace/experiments/run_comparison.py": "444041cdc36ddbe341f7ca00d0b4f1f2ee540274f7d7d5e4d3fba4cc3f387c33",
+            "experiment_workspace/experiments/full_batch_search.py": "a819281148900ea9b5de63939632e9a7922975e63f8ddc50ff286b073a9a45f8",
+            "experiment_workspace/experiments/cached_first_improvement_search.py": "14b426b1947f4f7d51f0ce96269d3254127a9f3952ccb11f3560b02cb7a207b7",
+            "experiment_workspace/experiments/first_improvement_search.py": "3c1445720f015a11e837f53e66b58f3b404426876eabadbc1140266c80aefb69",
+            "experiment_workspace/experiments/simple_batch_search.py": "335d7a96ed18ee868cb9648adbbb89ca175255ad2846359b16e2d3f43f5c2433",
+            "experiment_workspace/experiments/metal_first_improvement_search.py": "af40b4c852f87dd3db21c509d0ac037a10a7e6397e504372e15d31cc3d6e109b",
+            "experiment_workspace/experiments/pilot_comparisons.py": "88443211455a939806d704e8b0a1b453116f922dc2944f3a6dc7c2f78d47b3b0",
+            "public_repository/lesserdnn_cifar10_ablation_200/ldnn_cifar10_model.py": "dec9e233bcdb12dda250180c32c63db7975dd05f86b4f4f60d700631e50f1d54",
+            "public_repository/lesserdnn_cifar10_ablation_200/train_ldnn_cifar10.py": "ad925ff54bd7a7e57d700769f9b4ee2fb4eac39f950a855bc12317634b243c6a",
+            "public_repository/lesserdnn_cifar10_ablation_200/verify_pytorch_batch_ldnn.py": "2393212e1b77b0350c93ace698ee3f736be3b02796cd3acefc17c96bec33c6fd",
+            "public_repository/lesserdnn_cifar10_ablation_200/experiments/ldnn_cifar10_native_same_sign/train.py": "e22ba1dfc8576909b2b55f4f90696ced65832402dbb18826ddcfbc4274f285cb",
+            "public_repository/lesserdnn_cifar10_ablation_200/ldnn_runtime/core.py": "8231fa2f958d19000ff40975e2c7014bd15ec6af884bfc0a109b7c6fabbff01e",
+            "public_repository/lesserdnn_cifar10_ablation_200/ldnn_runtime/lmetal.py": "28a5d670ada2945fb1a9970e5d95deb93d30612d0aca0691a432d8d02863c8e9",
+            "public_repository/lesserdnn_cifar10_rigorous_eval/train_one.py": "037cf098cebe595ada28ce57ba262df555265148cab0fe14dee5c8639d1b3472",
+            "experiment_workspace/experiments/run_q8_comparison.py": "933a9ac008d5ea7735651ab2857acb1083e7c9acc65e5641d196e52340a694c0",
+            "experiment_workspace/experiments/run_q8_queue.py": "ca25ebe0ec532f7d9b512f4d4f10e5c294d6902d1afbe84650e174aa850edcec",
+            "experiment_workspace/experiments/run_paper_batched_queue.py": "d4a2b69f00629d71dd1ec9f8178cb23e277a7e411e03cbe69e5c50ffb1ac1e90"
+          },
+          "input_sha256": {
+            "data/cifar-10-batches-py/data_batch_1": "54636561a3ce25bd3e19253c6b0d8538147b0ae398331ac4a2d86c6d987368cd",
+            "data/cifar-10-batches-py/data_batch_2": "766b2cef9fbc745cf056b3152224f7cf77163b330ea9a15f9392beb8b89bc5a8",
+            "data/cifar-10-batches-py/data_batch_3": "0f00d98ebfb30b3ec0ad19f9756dc2630b89003e10525f5e148445e82aa6a1f9",
+            "data/cifar-10-batches-py/data_batch_4": "3f7bb240661948b8f4d53e36ec720d8306f5668bd0071dcb4e6c947f78e9682b",
+            "data/cifar-10-batches-py/data_batch_5": "d91802434d8376bbaeeadf58a737e3a1b12ac839077e931237e0dcd43adcb154",
+            "experiment_workspace/reports/soict_comparisons/reevaluations/uniform_max0125_10seeds_30min_20261024/summary.json": "08cedf164faeb5e086a49de6b1f0e1e5666e753754f224298e866d2d332bcf7b",
+            "experiment_workspace/reports/soict_comparisons/reevaluations/q11_10seeds_30min_20261025/summary.json": "af95b282c60294d535016066f0d8bf4eece0478b437aa4c825413a720e796bbc",
+            "experiment_workspace/reports/soict_comparisons/q8_preflight_20261026.json": "5a243b018a98a07372b17ce742e37eb85e4291b63db5e02da5f78f302152799f"
+          },
+          "reference_root": "experiment_workspace/reports/soict_comparisons/reevaluations/uniform_max0125_10seeds_30min_20261024",
+          "reference11_root": "experiment_workspace/reports/soict_comparisons/reevaluations/q11_10seeds_30min_20261025"
+        }
+      }
+    }
+  ],
+  "environments": {
+    "2e1275a9c10af448d94b3110b329dabc36bc5a8b97c12f022865465c7920f4b4": {
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "gpu": "Apple M4 Pro",
+      "python": "3.9.6",
+      "torch_threads": 10,
+      "dependencies": {
+        "numpy": "2.0.2",
+        "torch": "2.8.0",
+        "torchvision": "0.23.0",
+        "pyobjc-core": "11.1",
+        "pyobjc-framework-Metal": "11.1"
+      }
+    }
+  }
+}

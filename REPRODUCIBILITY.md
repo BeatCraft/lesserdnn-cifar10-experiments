@@ -29,6 +29,31 @@ mapped to the nearest codebook value for the next forward pass, and retained in 
 
 For `epsilon=0`, exact zeros are excluded by the same-sign mask.
 
+## Initialization
+
+The 300-epoch Gradient-mode comparison uses `initialize_fan_in_aware_weights` in
+`lesserdnn_cifar10_ablation_200/ldnn_cifar10_model.py`. This is part of the experimental setup,
+not an update rule. For each layer, in layer order:
+
+1. Set the target second moment `v = 2 / fan_in`.
+2. Select `a`, the available positive weight value closest to `sqrt(v)`; ties use the first value.
+3. Set `p = min(1, v / a²)`.
+4. Draw an independent activation mask with probability `p` and independent equiprobable signs;
+   assign `+a` or `-a` at active locations, otherwise `0`.
+
+The generator is NumPy `default_rng(seed)`, drawing the full activation mask and then the full sign
+mask for each layer. A single generator continues across Conv1, Conv2, Conv3 and FC. Thus seed,
+draw order, codebook ordering and matrix shape are part of reproducibility.
+
+For the paper's Q9 codebook, the nonzero magnitudes are 0.25, 0.125, 0.125 and 0.125, and the
+activation probabilities are 1, 4/9, 2/9 and 1/64. The achieved second moment may differ from the
+target when density is capped at one. Bias is zero and shadow weights start as exact float32 copies
+of the quantized initial weights.
+
+This is **not** the initializer used by the 80 timed runs. Those runs draw each index uniformly
+from the entries with absolute value at most 0.125, independently per layer. Q8 draws from two
+entries, Q9 three, Q10 four and Q11 five. See the [timed protocol](additional_experiments/README.md).
+
 ## Checkpoints
 
 Each run saves its latest quantized weights, shadow weights, state, split indexes, and epoch history. The best
@@ -38,3 +63,9 @@ validation checkpoint is stored separately. Resume validation rejects mismatched
 
 The public `results/` directory contains only lightweight aggregate data. Raw checkpoints and test predictions
 are omitted because they are large and are not required to verify the reported summary statistics.
+
+`results/timed_codebooks_80runs/` contains 80 final rows and 560 initial/intermediate/endpoint
+validation rows, plus sanitized original manifests and the recorded software/hardware environments.
+The rejected, exploratory single Q11 300-epoch run is not included. The original 300-epoch
+Gradient-mode results and the additional time-budget results use different initialization,
+selection and test-usage protocols and must not be pooled into a single mean.
