@@ -28,6 +28,25 @@ def close(actual: float, expected: float, tolerance: float = 1e-12) -> None:
         raise AssertionError(f"expected {expected}, got {actual}")
 
 
+def compare_results(actual: object, expected: object, path: str = "summary") -> None:
+    """Keep record structure exact; tolerate only floating-point roundoff across OSes."""
+    if isinstance(actual, dict) and isinstance(expected, dict):
+        if actual.keys() != expected.keys():
+            raise AssertionError(f"different fields at {path}")
+        for key in actual:
+            compare_results(actual[key], expected[key], f"{path}.{key}")
+    elif isinstance(actual, list) and isinstance(expected, list):
+        if len(actual) != len(expected):
+            raise AssertionError(f"different lengths at {path}")
+        for index, (left, right) in enumerate(zip(actual, expected)):
+            compare_results(left, right, f"{path}[{index}]")
+    elif isinstance(actual, float) and isinstance(expected, float):
+        if not np.isclose(actual, expected, rtol=1e-12, atol=1e-12):
+            raise AssertionError(f"different numeric result at {path}: {actual} vs {expected}")
+    elif type(actual) is not type(expected) or actual != expected:
+        raise AssertionError(f"different result at {path}: {actual!r} vs {expected!r}")
+
+
 def main() -> None:
     model = CifarReferenceCNN()
     if sum(parameter.numel() for parameter in model.parameters()) != 174_944:
@@ -73,8 +92,7 @@ def main() -> None:
     folder = ROOT / "results" / "timed_codebooks_80runs"
     saved = json.loads((folder / "summary.json").read_text())
     recomputed = analyze(folder, write=False)
-    if saved != recomputed:
-        raise AssertionError("80-run summary does not match seed-level records")
+    compare_results(saved, recomputed)
     with (folder / "per_run_results.csv").open() as stream:
         records = list(csv.DictReader(stream))
     with (folder / "learning_curves.csv").open() as stream:

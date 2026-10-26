@@ -5,14 +5,19 @@ type: software
 abstract: >-
   Reproducible CIFAR-10 experiments evaluating three gradient-guided update
   modes for LesserDNN with quantized forward weights and float32 shadow
-  weights, together with a full-precision PyTorch reference.
+  weights, together with a full-precision PyTorch reference and an 80-run,
+  8/9/10/11-level strict-search versus Gradient time-budget comparison.
 authors:
   - family-names: Takemoto
     given-names: Masashi
     orcid: "https://orcid.org/0000-0002-8978-9460"
-version: 1.0.0
-date-released: 2026-09-14
-doi: "10.5281/zenodo.22743843"
+version: 1.1.0
+date-released: 2026-10-27
+url: "https://github.com/BeatCraft/lesserdnn-cifar10-experiments/releases/tag/v1.1.0"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22743842"
+    description: "Concept DOI for all versions; see the release for its version-specific DOI."
 license: MIT
 repository-code: "https://github.com/BeatCraft/lesserdnn-cifar10-experiments"
 keywords:

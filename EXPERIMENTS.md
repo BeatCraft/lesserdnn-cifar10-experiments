@@ -18,5 +18,5 @@ described separately because initialization, evaluation cadence, stopping and te
 Exploratory runs, failed/interrupted predecessor queues, and the rejected single Q11 300-epoch
 follow-up are not part of the paper results exported in this working tree.
 
-The archived DOI metadata and `CITATION.cff` describe release v1.0.0. The added timed comparison
-is an unreleased working-tree extension until a new version is explicitly published and archived.
+The added timed comparison is included in v1.1.0. `CITATION.cff` identifies this version;
+the v1.0.0 version-specific DOI describes only the earlier archive. The concept DOI spans versions.

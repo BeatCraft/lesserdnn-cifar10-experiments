@@ -7,9 +7,9 @@ This repository-ready package contains the code and aggregate results for the CI
 Metal implementation, three gradient update modes, and a controlled full-precision PyTorch reference.
 
 The working tree also includes the **80-run, 8/9/10/11-level strict-search versus Gradient
-comparison prepared for the paper revision**. Its validation-only, 30-minute protocol is separate
-from the original 300-epoch, test-evaluated Gradient-mode comparison. The additional experiment
-is an unreleased addition; the `v1.0.0` DOI below identifies the earlier archived release.
+comparison prepared for the paper revision** in release **v1.1.0**. Its validation-only,
+30-minute protocol is separate from the original 300-epoch, test-evaluated Gradient-mode comparison.
+The `v1.0.0` DOI below identifies the earlier archived release.
 
 ## What is included
 
@@ -226,7 +226,9 @@ sequentially; this experiment does not isolate a pure causal effect of zero or s
 
 ## Citation
 
-The archived `v1.0.0` release is available at
+The current release is [v1.1.0](https://github.com/BeatCraft/lesserdnn-cifar10-experiments/releases/tag/v1.1.0).
+Its version-specific Zenodo DOI is added here after automatic archiving completes.
+The earlier archived `v1.0.0` release is available at
 [doi:10.5281/zenodo.22743843](https://doi.org/10.5281/zenodo.22743843). To cite the repository across all
 versions, use [doi:10.5281/zenodo.22743842](https://doi.org/10.5281/zenodo.22743842). Machine-readable
 citation metadata are provided in [`CITATION.cff`](CITATION.cff).

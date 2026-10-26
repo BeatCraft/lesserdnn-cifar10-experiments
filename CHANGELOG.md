@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## v1.1.0 — 2026-10-27
 
 - Add the 80 completed Q8/Q9/Q10/Q11 strict-search/Gradient, 30-minute, ten-seed comparison for
   the paper revision, with all seed-level endpoints, seven validation observations per run,
@@ -9,7 +9,9 @@
 - Document the original fan-in sparse initializer and its distinction from uniform timed initialization.
 - Distinguish the historical Adam reference from the separately provided SGD reference.
 - Fix the missing-dependency error message to point to the repository-root requirements file.
+- Validate recomputed statistical summaries with a 1e-12 floating-point tolerance across platforms,
+  while retaining exact record structure and initialization-hash checks.
 
 ## v1.0.0
 
-The existing archived release and its DOI remain unchanged. No new release or DOI has been created.
+The original archived release and its DOI remain unchanged.
